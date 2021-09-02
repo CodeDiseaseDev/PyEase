@@ -35,6 +35,7 @@ namespace Python_IDE
             this.tabs = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new Python_IDE.BTabPage();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -44,7 +45,6 @@ namespace Python_IDE
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,7 +65,7 @@ namespace Python_IDE
             this.consoleControl1.Name = "consoleControl1";
             this.consoleControl1.SendKeyboardCommandsToProcess = true;
             this.consoleControl1.ShowDiagnostics = false;
-            this.consoleControl1.Size = new System.Drawing.Size(1105, 151);
+            this.consoleControl1.Size = new System.Drawing.Size(1282, 194);
             this.consoleControl1.TabIndex = 3;
             // 
             // splitContainer1
@@ -86,8 +86,8 @@ namespace Python_IDE
             this.splitContainer1.Panel2.Controls.Add(this.iconButton8);
             this.splitContainer1.Panel2.Controls.Add(this.consoleControl1);
             this.splitContainer1.Panel2MinSize = 0;
-            this.splitContainer1.Size = new System.Drawing.Size(1105, 597);
-            this.splitContainer1.SplitterDistance = 442;
+            this.splitContainer1.Size = new System.Drawing.Size(1282, 762);
+            this.splitContainer1.SplitterDistance = 564;
             this.splitContainer1.TabIndex = 4;
             // 
             // tabs
@@ -99,7 +99,7 @@ namespace Python_IDE
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(1105, 442);
+            this.tabs.Size = new System.Drawing.Size(1282, 564);
             this.tabs.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabs.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.tabs.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -130,7 +130,7 @@ namespace Python_IDE
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1097, 404);
+            this.tabPage1.Size = new System.Drawing.Size(1274, 526);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Index";
             // 
@@ -144,16 +144,39 @@ namespace Python_IDE
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Python;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 398;
+            this.iconPictureBox1.IconSize = 520;
             this.iconPictureBox1.Location = new System.Drawing.Point(3, 3);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(1091, 398);
+            this.iconPictureBox1.Size = new System.Drawing.Size(1268, 520);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.UseGdi = true;
             this.iconPictureBox1.UseIconCache = true;
+            // 
+            // iconButton8
+            // 
+            this.iconButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton8.BackColor = System.Drawing.Color.Black;
+            this.iconButton8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton8.FlatAppearance.BorderSize = 0;
+            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.iconButton8.ForeColor = System.Drawing.Color.White;
+            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.iconButton8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton8.IconSize = 30;
+            this.iconButton8.Location = new System.Drawing.Point(1242, 3);
+            this.iconButton8.Name = "iconButton8";
+            this.iconButton8.Size = new System.Drawing.Size(37, 33);
+            this.iconButton8.TabIndex = 12;
+            this.iconButton8.Text = " ";
+            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton8.UseVisualStyleBackColor = false;
+            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
             // 
             // iconButton1
             // 
@@ -332,35 +355,12 @@ namespace Python_IDE
             this.guna2Panel2.Size = new System.Drawing.Size(131, 38);
             this.guna2Panel2.TabIndex = 13;
             // 
-            // iconButton8
-            // 
-            this.iconButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton8.BackColor = System.Drawing.Color.Black;
-            this.iconButton8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.iconButton8.ForeColor = System.Drawing.Color.White;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.iconButton8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton8.IconSize = 30;
-            this.iconButton8.Location = new System.Drawing.Point(1065, 3);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Size = new System.Drawing.Size(37, 33);
-            this.iconButton8.TabIndex = 12;
-            this.iconButton8.Text = " ";
-            this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton8.UseVisualStyleBackColor = false;
-            this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
-            // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1129, 660);
+            this.ClientSize = new System.Drawing.Size(1306, 825);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.splitContainer1);
@@ -368,7 +368,7 @@ namespace Python_IDE
             this.MinimumSize = new System.Drawing.Size(471, 462);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Python Playground";
+            this.Text = "PyEase";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
