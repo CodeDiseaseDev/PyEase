@@ -368,7 +368,7 @@ namespace Python_IDE
             this.MinimumSize = new System.Drawing.Size(471, 462);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Python Playground";
+            this.Text = "PyEase";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
