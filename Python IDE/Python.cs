@@ -20,9 +20,9 @@ namespace Python_IDE
             string file = Path.GetRandomFileName() + ".py";
             string path = Path.Combine(temp, file);
             File.WriteAllLines(path, code);
-            control.StartProcess("python.exe", path);
             Task.Run(() =>
             {
+                control.StartProcess("python.exe", path);
                 while (control.ProcessInterface.IsProcessRunning);
                 done();
             });
