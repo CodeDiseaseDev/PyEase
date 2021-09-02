@@ -17,6 +17,8 @@ namespace Python_IDE
 {
     public partial class MainWindow : Form
     {
+
+		public bool isTerminalHidden = false;
         public MainWindow()
         {
 			InitializeComponent();
@@ -60,7 +62,7 @@ namespace Python_IDE
 			scintilla.Margins[1].Width = 0;
 			scintilla.SetSelectionBackColor(true, IntToColor(0x353535));
 			scintilla.StyleClearAll();
-
+			
 			scintilla.Styles[Style.Python.Identifier].ForeColor = IntToColor(0xD0DAE2);
 			scintilla.Styles[Style.Python.CommentLine].ForeColor = IntToColor(0x40BF57);
 			scintilla.Styles[Style.Python.Number].ForeColor = IntToColor(0xFFFF00);
@@ -156,6 +158,9 @@ namespace Python_IDE
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
+
+			// Even tho not the best implementation good enough
+			isTerminalHidden = true;
 			splitContainer1.SplitterDistance = splitContainer1.Height;
 		}
 
@@ -163,5 +168,14 @@ namespace Python_IDE
         {
 			Close();
         }
+
+        private void iconButton9_Click_1(object sender, EventArgs e)
+        {
+			if (isTerminalHidden)
+			{
+				splitContainer1.SplitterDistance = 500;
+				isTerminalHidden = false;
+			}
+		}
     }
 }

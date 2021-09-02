@@ -21,7 +21,9 @@ namespace Python_IDE
             File.WriteAllLines(path, code);
             Task.Run(() =>
             {
-                control.StartProcess("python.exe", path);
+
+                // For some reason python.exe isn't everywhere
+                control.StartProcess("py.exe", path);
                 while (control.ProcessInterface.IsProcessRunning);
                 done();
             });
@@ -41,7 +43,7 @@ namespace Python_IDE
         public void InstallPackage(string name, ConsoleControl.ConsoleControl control, Action done)
         {
             if (control.IsProcessRunning) control.StopProcess();
-            control.StartProcess("python.exe", $"-m pip install {name}");
+            control.StartProcess("py.exe", $"-m pip install {name}");
             Task.Run(() =>
             {
                 while (control.ProcessInterface.IsProcessRunning);
@@ -51,6 +53,7 @@ namespace Python_IDE
 
         public string GetPackagePath(string name)
         {
+            // Not the best way to find a directory since many people don't have python 3.9 installed
             return Path.Combine(pythonDir, @"Python39\Lib\site-packages", name);
         }
 
@@ -61,6 +64,7 @@ namespace Python_IDE
 
         public string[] GetModulesNoFilter()
         {
+            // Not the best way to find a directory since many people don't have python 3.9 installed
             string mdir = Path.Combine(pythonDir, @"Python39\Lib\site-packages");
             return Directory.GetDirectories(mdir).ToArray();
         }
