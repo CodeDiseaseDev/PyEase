@@ -45,6 +45,7 @@ namespace Python_IDE
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton9 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -346,14 +347,37 @@ namespace Python_IDE
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.iconButton9);
             this.guna2Panel2.Controls.Add(this.iconButton5);
             this.guna2Panel2.Controls.Add(this.iconButton3);
             this.guna2Panel2.Controls.Add(this.iconButton4);
             this.guna2Panel2.Location = new System.Drawing.Point(188, 7);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(131, 38);
+            this.guna2Panel2.Size = new System.Drawing.Size(175, 38);
             this.guna2Panel2.TabIndex = 13;
+            // 
+            // iconButton9
+            // 
+            this.iconButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton9.FlatAppearance.BorderSize = 0;
+            this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.iconButton9.ForeColor = System.Drawing.Color.White;
+            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Terminal;
+            this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(201)))), ((int)(((byte)(166)))));
+            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton9.IconSize = 30;
+            this.iconButton9.Location = new System.Drawing.Point(132, 3);
+            this.iconButton9.Name = "iconButton9";
+            this.iconButton9.Size = new System.Drawing.Size(37, 33);
+            this.iconButton9.TabIndex = 10;
+            this.iconButton9.Text = " ";
+            this.iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton9.UseVisualStyleBackColor = false;
+            this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click_1);
             // 
             // MainWindow
             // 
@@ -398,6 +422,7 @@ namespace Python_IDE
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton iconButton9;
     }
 }
 
