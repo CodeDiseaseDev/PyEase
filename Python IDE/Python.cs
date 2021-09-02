@@ -15,7 +15,6 @@ namespace Python_IDE
 
         public void RunScript(string[] code, ConsoleControl.ConsoleControl control, Action done)
         {
-            if (control.IsProcessRunning) control.StopProcess();
             string temp = Path.GetTempPath();
             string file = Path.GetRandomFileName() + ".py";
             string path = Path.Combine(temp, file);
