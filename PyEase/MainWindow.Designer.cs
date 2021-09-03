@@ -35,11 +35,14 @@ namespace PyEase
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.discordplug = new System.Windows.Forms.Label();
-            this.iconButton10 = new PyEase.RoundedButtonIcon();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconButton9 = new PyEase.RoundedButtonIcon();
-            this.iconButton5 = new PyEase.RoundedButtonIcon();
             this.iconButton3 = new PyEase.RoundedButtonIcon();
+            this.iconButton5 = new PyEase.RoundedButtonIcon();
             this.iconButton4 = new PyEase.RoundedButtonIcon();
+            this.roundedButtonIcon1 = new PyEase.RoundedButtonIcon();
+            this.iconButton10 = new PyEase.RoundedButtonIcon();
             this.iconButton1 = new PyEase.RoundedButtonIcon();
             this.iconButton7 = new PyEase.RoundedButtonIcon();
             this.iconButton2 = new PyEase.RoundedButtonIcon();
@@ -50,13 +53,14 @@ namespace PyEase
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton8 = new PyEase.RoundedButtonIcon();
-            this.roundedButtonIcon1 = new PyEase.RoundedButtonIcon();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -72,7 +76,7 @@ namespace PyEase
             this.consoleControl1.Name = "consoleControl1";
             this.consoleControl1.SendKeyboardCommandsToProcess = true;
             this.consoleControl1.ShowDiagnostics = false;
-            this.consoleControl1.Size = new System.Drawing.Size(1258, 179);
+            this.consoleControl1.Size = new System.Drawing.Size(1258, 177);
             this.consoleControl1.TabIndex = 3;
             // 
             // splitContainer1
@@ -80,7 +84,7 @@ namespace PyEase
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(12, 51);
+            this.splitContainer1.Location = new System.Drawing.Point(12, 61);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -94,34 +98,36 @@ namespace PyEase
             this.splitContainer1.Panel2.Controls.Add(this.iconButton8);
             this.splitContainer1.Panel2.Controls.Add(this.consoleControl1);
             this.splitContainer1.Panel2MinSize = 0;
-            this.splitContainer1.Size = new System.Drawing.Size(1258, 744);
-            this.splitContainer1.SplitterDistance = 561;
+            this.splitContainer1.Size = new System.Drawing.Size(1258, 734);
+            this.splitContainer1.SplitterDistance = 553;
             this.splitContainer1.TabIndex = 4;
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BorderRadius = 12;
             this.guna2Panel1.Controls.Add(this.iconButton1);
             this.guna2Panel1.Controls.Add(this.iconButton7);
             this.guna2Panel1.Controls.Add(this.iconButton2);
             this.guna2Panel1.Controls.Add(this.iconButton6);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 7);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(12, 11);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(175, 38);
+            this.guna2Panel1.Size = new System.Drawing.Size(178, 45);
             this.guna2Panel1.TabIndex = 12;
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.BorderRadius = 12;
             this.guna2Panel2.Controls.Add(this.roundedButtonIcon1);
             this.guna2Panel2.Controls.Add(this.iconButton10);
-            this.guna2Panel2.Controls.Add(this.iconButton9);
-            this.guna2Panel2.Controls.Add(this.iconButton5);
-            this.guna2Panel2.Controls.Add(this.iconButton3);
-            this.guna2Panel2.Controls.Add(this.iconButton4);
-            this.guna2Panel2.Location = new System.Drawing.Point(193, 7);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(386, 11);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(261, 38);
+            this.guna2Panel2.Size = new System.Drawing.Size(92, 45);
             this.guna2Panel2.TabIndex = 13;
             // 
             // discordplug
@@ -129,39 +135,42 @@ namespace PyEase
             this.discordplug.AutoSize = true;
             this.discordplug.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.discordplug.ForeColor = System.Drawing.Color.White;
-            this.discordplug.Location = new System.Drawing.Point(453, 18);
+            this.discordplug.Location = new System.Drawing.Point(483, 21);
             this.discordplug.Name = "discordplug";
-            this.discordplug.Size = new System.Drawing.Size(139, 13);
+            this.discordplug.Size = new System.Drawing.Size(256, 13);
             this.discordplug.TabIndex = 14;
-            this.discordplug.Text = "< We have a Discord now";
+            this.discordplug.Text = "< Check out our Discord server and GitHub repo";
             // 
-            // iconButton10
+            // guna2Panel4
             // 
-            this.iconButton10.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.iconButton10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.iconButton10.FlatAppearance.BorderSize = 0;
-            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.iconButton10.ForeColor = System.Drawing.Color.White;
-            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.Discord;
-            this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton10.IconSize = 30;
-            this.iconButton10.Location = new System.Drawing.Point(217, 3);
-            this.iconButton10.Name = "iconButton10";
-            this.iconButton10.Size = new System.Drawing.Size(37, 33);
-            this.iconButton10.TabIndex = 11;
-            this.iconButton10.Text = " ";
-            this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton10.UseVisualStyleBackColor = false;
-            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            this.guna2Panel4.BorderRadius = 12;
+            this.guna2Panel4.Controls.Add(this.iconButton5);
+            this.guna2Panel4.Controls.Add(this.iconButton4);
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.guna2Panel4.Location = new System.Drawing.Point(194, 11);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
+            this.guna2Panel4.Size = new System.Drawing.Size(92, 45);
+            this.guna2Panel4.TabIndex = 15;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BorderRadius = 12;
+            this.guna2Panel5.Controls.Add(this.iconButton9);
+            this.guna2Panel5.Controls.Add(this.iconButton3);
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(290, 11);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.Parent = this.guna2Panel5;
+            this.guna2Panel5.Size = new System.Drawing.Size(92, 45);
+            this.guna2Panel5.TabIndex = 16;
             // 
             // iconButton9
             // 
-            this.iconButton9.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton9.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton9.FlatAppearance.BorderSize = 0;
             this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -171,7 +180,8 @@ namespace PyEase
             this.iconButton9.IconColor = System.Drawing.Color.Gray;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.IconSize = 30;
-            this.iconButton9.Location = new System.Drawing.Point(174, 3);
+            this.iconButton9.Location = new System.Drawing.Point(6, 6);
+            this.iconButton9.Margin = new System.Windows.Forms.Padding(6);
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Size = new System.Drawing.Size(37, 33);
             this.iconButton9.TabIndex = 10;
@@ -181,33 +191,10 @@ namespace PyEase
             this.iconButton9.UseVisualStyleBackColor = false;
             this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click_1);
             // 
-            // iconButton5
-            // 
-            this.iconButton5.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.FileMedical;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(201)))), ((int)(((byte)(166)))));
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 30;
-            this.iconButton5.Location = new System.Drawing.Point(88, 3);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(37, 33);
-            this.iconButton5.TabIndex = 9;
-            this.iconButton5.Text = " ";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton5.UseVisualStyleBackColor = false;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
-            // 
             // iconButton3
             // 
-            this.iconButton3.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton3.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -217,7 +204,8 @@ namespace PyEase
             this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(135)))), ((int)(((byte)(98)))));
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(45, 3);
+            this.iconButton3.Location = new System.Drawing.Point(49, 6);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(6);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(37, 33);
             this.iconButton3.TabIndex = 7;
@@ -227,33 +215,105 @@ namespace PyEase
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
+            // iconButton5
+            // 
+            this.iconButton5.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.iconButton5.ForeColor = System.Drawing.Color.White;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.iconButton5.IconColor = System.Drawing.Color.White;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton5.IconSize = 30;
+            this.iconButton5.Location = new System.Drawing.Point(6, 6);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(6, 6, 3, 6);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Size = new System.Drawing.Size(37, 33);
+            this.iconButton5.TabIndex = 9;
+            this.iconButton5.Text = " ";
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
             // iconButton4
             // 
-            this.iconButton4.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton4.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.FileImport;
-            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(201)))), ((int)(((byte)(166)))));
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 30;
-            this.iconButton4.Location = new System.Drawing.Point(131, 3);
+            this.iconButton4.Location = new System.Drawing.Point(49, 6);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(3, 6, 6, 6);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(37, 33);
             this.iconButton4.TabIndex = 8;
-            this.iconButton4.Text = " ";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton4.Text = "O";
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.iconButton4.UseVisualStyleBackColor = false;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
+            // roundedButtonIcon1
+            // 
+            this.roundedButtonIcon1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.roundedButtonIcon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.roundedButtonIcon1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.roundedButtonIcon1.FlatAppearance.BorderSize = 0;
+            this.roundedButtonIcon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonIcon1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.roundedButtonIcon1.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonIcon1.IconChar = FontAwesome.Sharp.IconChar.Github;
+            this.roundedButtonIcon1.IconColor = System.Drawing.Color.White;
+            this.roundedButtonIcon1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundedButtonIcon1.IconSize = 30;
+            this.roundedButtonIcon1.Location = new System.Drawing.Point(6, 6);
+            this.roundedButtonIcon1.Margin = new System.Windows.Forms.Padding(6);
+            this.roundedButtonIcon1.Name = "roundedButtonIcon1";
+            this.roundedButtonIcon1.Size = new System.Drawing.Size(37, 33);
+            this.roundedButtonIcon1.TabIndex = 12;
+            this.roundedButtonIcon1.Text = " ";
+            this.roundedButtonIcon1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButtonIcon1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.roundedButtonIcon1.UseVisualStyleBackColor = false;
+            this.roundedButtonIcon1.Click += new System.EventHandler(this.roundedButtonIcon1_Click);
+            // 
+            // iconButton10
+            // 
+            this.iconButton10.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton10.FlatAppearance.BorderSize = 0;
+            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.iconButton10.ForeColor = System.Drawing.Color.White;
+            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.Discord;
+            this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton10.IconSize = 30;
+            this.iconButton10.Location = new System.Drawing.Point(49, 6);
+            this.iconButton10.Margin = new System.Windows.Forms.Padding(6);
+            this.iconButton10.Name = "iconButton10";
+            this.iconButton10.Size = new System.Drawing.Size(37, 33);
+            this.iconButton10.TabIndex = 11;
+            this.iconButton10.Text = " ";
+            this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton10.UseVisualStyleBackColor = false;
+            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            // 
             // iconButton1
             // 
-            this.iconButton1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -263,7 +323,8 @@ namespace PyEase
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(1, 3);
+            this.iconButton1.Location = new System.Drawing.Point(6, 6);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(6);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(37, 33);
             this.iconButton1.TabIndex = 5;
@@ -275,8 +336,8 @@ namespace PyEase
             // 
             // iconButton7
             // 
-            this.iconButton7.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton7.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton7.FlatAppearance.BorderSize = 0;
             this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -286,7 +347,8 @@ namespace PyEase
             this.iconButton7.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.IconSize = 30;
-            this.iconButton7.Location = new System.Drawing.Point(130, 3);
+            this.iconButton7.Location = new System.Drawing.Point(135, 6);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(6);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Size = new System.Drawing.Size(37, 33);
             this.iconButton7.TabIndex = 11;
@@ -298,8 +360,8 @@ namespace PyEase
             // 
             // iconButton2
             // 
-            this.iconButton2.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton2.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -309,7 +371,8 @@ namespace PyEase
             this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 30;
-            this.iconButton2.Location = new System.Drawing.Point(44, 3);
+            this.iconButton2.Location = new System.Drawing.Point(49, 6);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(6);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(37, 33);
             this.iconButton2.TabIndex = 6;
@@ -321,18 +384,19 @@ namespace PyEase
             // 
             // iconButton6
             // 
-            this.iconButton6.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.iconButton6.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton6.FlatAppearance.BorderSize = 0;
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(100)))));
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton6.IconSize = 30;
-            this.iconButton6.Location = new System.Drawing.Point(87, 3);
+            this.iconButton6.Location = new System.Drawing.Point(92, 6);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(6);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(37, 33);
             this.iconButton6.TabIndex = 10;
@@ -351,7 +415,7 @@ namespace PyEase
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(1258, 561);
+            this.tabs.Size = new System.Drawing.Size(1258, 553);
             this.tabs.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabs.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.tabs.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -383,7 +447,7 @@ namespace PyEase
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1250, 523);
+            this.tabPage1.Size = new System.Drawing.Size(1250, 515);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Welcome";
             // 
@@ -397,7 +461,7 @@ namespace PyEase
             this.guna2Panel3.Location = new System.Drawing.Point(6, 6);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1238, 511);
+            this.guna2Panel3.Size = new System.Drawing.Size(1238, 503);
             this.guna2Panel3.TabIndex = 12;
             this.guna2Panel3.UseTransparentBackground = true;
             // 
@@ -410,7 +474,7 @@ namespace PyEase
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1238, 511);
+            this.label1.Size = new System.Drawing.Size(1238, 503);
             this.label1.TabIndex = 1;
             this.label1.Text = "PyEase Pre-release\r\nVersion v";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -425,11 +489,11 @@ namespace PyEase
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Python;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 517;
+            this.iconPictureBox1.IconSize = 509;
             this.iconPictureBox1.Location = new System.Drawing.Point(3, 3);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(1244, 517);
+            this.iconPictureBox1.Size = new System.Drawing.Size(1244, 509);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
@@ -460,35 +524,14 @@ namespace PyEase
             this.iconButton8.UseVisualStyleBackColor = false;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
             // 
-            // roundedButtonIcon1
-            // 
-            this.roundedButtonIcon1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.roundedButtonIcon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.roundedButtonIcon1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.roundedButtonIcon1.FlatAppearance.BorderSize = 0;
-            this.roundedButtonIcon1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonIcon1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.roundedButtonIcon1.ForeColor = System.Drawing.Color.White;
-            this.roundedButtonIcon1.IconChar = FontAwesome.Sharp.IconChar.Github;
-            this.roundedButtonIcon1.IconColor = System.Drawing.Color.White;
-            this.roundedButtonIcon1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundedButtonIcon1.IconSize = 30;
-            this.roundedButtonIcon1.Location = new System.Drawing.Point(2, 3);
-            this.roundedButtonIcon1.Name = "roundedButtonIcon1";
-            this.roundedButtonIcon1.Size = new System.Drawing.Size(37, 33);
-            this.roundedButtonIcon1.TabIndex = 12;
-            this.roundedButtonIcon1.Text = " ";
-            this.roundedButtonIcon1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButtonIcon1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.roundedButtonIcon1.UseVisualStyleBackColor = false;
-            this.roundedButtonIcon1.Click += new System.EventHandler(this.roundedButtonIcon1_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1282, 807);
+            this.Controls.Add(this.guna2Panel5);
+            this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.discordplug);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -506,6 +549,8 @@ namespace PyEase
             this.splitContainer1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel5.ResumeLayout(false);
             this.tabs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
@@ -537,5 +582,7 @@ namespace PyEase
         private PyEase.RoundedButtonIcon iconButton10;
         private System.Windows.Forms.Label discordplug;
         private RoundedButtonIcon roundedButtonIcon1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
     }
 }
