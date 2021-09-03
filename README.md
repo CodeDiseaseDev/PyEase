@@ -10,3 +10,7 @@ We now have a [Discord server](https://discord.gg/4HTgUrzD), join us!
 # Changelog
 
 changelog can be found in [commits](https://github.com/CodeDiseaseDev/PyEase/commits/master)
+
+# Getting Started
+
+For downloads go to @CodeDiseaseDev repository this is the experimental/my personal version
