@@ -65,7 +65,7 @@ namespace PyEase
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(261, 65);
+            this.guna2Button2.Location = new System.Drawing.Point(260, 65);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(75, 23);
@@ -101,7 +101,7 @@ namespace PyEase
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(324, 23);
+            this.guna2TextBox1.Size = new System.Drawing.Size(323, 23);
             this.guna2TextBox1.TabIndex = 5;
             this.guna2TextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
@@ -110,7 +110,7 @@ namespace PyEase
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(348, 100);
+            this.ClientSize = new System.Drawing.Size(347, 97);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.label1);

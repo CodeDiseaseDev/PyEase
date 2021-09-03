@@ -36,6 +36,8 @@ namespace PyEase
         {
 			Scintilla scintilla = new Scintilla();
 			SyntaxHighlighting(scintilla);
+			scintilla.AutoCIgnoreCase = true;
+            scintilla.Insert += (sender, e) => AutoComplete(sender, e, scintilla);
 			scintilla.Text = File.ReadAllText(file);
 			BTabPage page = new BTabPage();
 			page.CodeEditor = scintilla;
@@ -50,8 +52,21 @@ namespace PyEase
 			tabs.SelectedIndex = tabs.TabCount - 1;
 		}
 
-		void SyntaxHighlighting(Scintilla scintilla)
+        private void AutoComplete(object sender, ModificationEventArgs e, Scintilla scintilla)
         {
+			var keywords = "__init__ __name__ print False None True and as assert async await break class continue def del elif else except finally for from global if import in is lambda nonlocal not or pass raise return try while with yield";
+			var currentPos = scintilla.CurrentPosition;
+			var wordStartPos = scintilla.WordStartPosition(currentPos, true);
+			var lengthEntered = currentPos - wordStartPos;
+			if (lengthEntered > 0)
+			{
+				scintilla.AutoCShow(lengthEntered, keywords);
+			}
+		}
+
+        void SyntaxHighlighting(Scintilla scintilla)
+        {
+			var keywords = "__init__ __name__ print False None True and as assert async await break class continue def del elif else except finally for from global if import in is lambda nonlocal not or pass raise return try while with yield";
 			scintilla.StyleResetDefault();
 			scintilla.BorderStyle = BorderStyle.None;
 			scintilla.HScrollBar = false;
@@ -79,11 +94,13 @@ namespace PyEase
 			scintilla.Styles[Style.Python.Decorator].ForeColor = IntToColor(0xf04444);
 
 			scintilla.Lexer = Lexer.Python;
+			
+			scintilla.SetKeywords(1, keywords);
 
-			scintilla.SetKeywords(1, "__init__ __name__ print False None True and as assert async await break class continue def del elif else except finally for from global if import in is lambda nonlocal not or pass raise return try while with yield");
+			
 		}
 
-		public static Color IntToColor(int rgb)
+			public static Color IntToColor(int rgb)
 			=> Color.FromArgb(255, (byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
 
 		private void iconButton1_Click(object sender, EventArgs e)
