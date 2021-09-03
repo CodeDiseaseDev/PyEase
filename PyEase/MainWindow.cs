@@ -202,12 +202,23 @@ namespace PyEase
 
 		private void iconButton10_Click(object sender, EventArgs e)
 			=> // open the link in the browser
-			Process.Start("https://discord.gg/4HTgUrzD");
+			OpenLink("https://discord.gg/4HTgUrzD");
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
 			foreach (string a in Program.startupFiles)
 				LoadFile(a);
         }
+
+		void OpenLink(string link)
+        {
+			if (MessageBox.Show($"That will open a link in your browser, continue?", link, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				Process.Start(link);
+		}
+
+        private void roundedButtonIcon1_Click(object sender, EventArgs e)
+        {
+			OpenLink("https://github.com/CodeDiseaseDev/PyEase");
+		}
     }
 }
