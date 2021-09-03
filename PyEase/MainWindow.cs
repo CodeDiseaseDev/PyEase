@@ -25,6 +25,7 @@ namespace PyEase
 			currentPage = tabPage1;
 			guna2Panel1.Enabled = tabPage1.IsEditable;
 			SoftBlink(discordplug, Color.FromArgb(60,60,60), Color.FromArgb(200,200,200), 2000, false);
+			label1.Text = label1.Text.Replace("v", typeof(Program).Assembly.GetName().Version.ToString());
 		}
 
 		List<BTabPage> pages = new List<BTabPage>();

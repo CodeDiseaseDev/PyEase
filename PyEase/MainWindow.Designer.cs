@@ -160,14 +160,14 @@ namespace PyEase
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Corbel", 20F);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1238, 511);
             this.label1.TabIndex = 1;
-            this.label1.Text = "PyEase Pre-release";
+            this.label1.Text = "PyEase Pre-release\r\nVersion v";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconPictureBox1
@@ -503,4 +503,3 @@ namespace PyEase
         private System.Windows.Forms.Label discordplug;
     }
 }
-
