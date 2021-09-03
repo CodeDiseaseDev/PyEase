@@ -1,5 +1,5 @@
 ﻿
-namespace Python_IDE
+namespace PyEase
 {
     partial class NoPython
     {

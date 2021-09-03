@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScintillaNET;
 
-namespace Python_IDE
+namespace PyEase
 {
     class BTabPage : TabPage
     {

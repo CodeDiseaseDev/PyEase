@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Python_IDE
+namespace PyEase
 {
     static class Program
     {

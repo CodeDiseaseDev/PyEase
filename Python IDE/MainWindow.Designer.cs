@@ -1,5 +1,5 @@
 ﻿
-namespace Python_IDE
+namespace PyEase
 {
     partial class MainWindow
     {
@@ -46,7 +46,7 @@ namespace Python_IDE
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.discordplug = new System.Windows.Forms.Label();
             this.tabs = new Guna.UI2.WinForms.Guna2TabControl();
-            this.tabPage1 = new Python_IDE.BTabPage();
+            this.tabPage1 = new PyEase.BTabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -491,7 +491,7 @@ namespace Python_IDE
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton7;
-        private Python_IDE.BTabPage tabPage1;
+        private PyEase.BTabPage tabPage1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;

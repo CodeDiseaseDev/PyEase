@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Python_IDE
+namespace PyEase
 {
     public partial class NoPython : Form
     {

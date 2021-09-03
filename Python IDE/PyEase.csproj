@@ -8,7 +8,7 @@
     <ProjectGuid>{DDDACDA8-B75C-4F07-9857-BBDD2CDC1144}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Python_IDE</RootNamespace>
-    <AssemblyName>Python IDE</AssemblyName>
+    <AssemblyName>PyEase</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -262,6 +262,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="PythonPackage.resx">
       <DependentUpon>PythonPackage.cs</DependentUpon>
