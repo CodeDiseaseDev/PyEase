@@ -18,7 +18,6 @@ namespace Python_IDE
     public partial class MainWindow : Form
     {
 
-		public bool isTerminalHidden = false;
         public MainWindow()
         {
 			InitializeComponent();
@@ -30,6 +29,8 @@ namespace Python_IDE
 
 		List<BTabPage> pages = new List<BTabPage>();
 		BTabPage currentPage;
+		Python python = new Python();
+		public bool isTerminalHidden = false;
 
 		public void LoadFile(string file)
         {
@@ -83,13 +84,9 @@ namespace Python_IDE
 		}
 
 		public static Color IntToColor(int rgb)
-		{
-			return Color.FromArgb(255, (byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
-		}
+			=> Color.FromArgb(255, (byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
 
-		Python python = new Python();
-
-        private void iconButton1_Click(object sender, EventArgs e)
+		private void iconButton1_Click(object sender, EventArgs e)
         {
 			consoleControl1.InternalRichTextBox.ResetText();
 			consoleControl1.InternalRichTextBox.AppendText($"> python {currentPage.File}\n\n");
@@ -111,18 +108,14 @@ namespace Python_IDE
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
-        {
-			new PackageManager();
-        }
+			=> new PackageManager();
 
-        private void iconButton4_Click(object sender, EventArgs e)
+		private void iconButton4_Click(object sender, EventArgs e)
         {
 			OpenFileDialog dialog = new OpenFileDialog();
-			dialog.Filter = "Python Files|*.py";
+			dialog.Filter = "Python Scripts|*.py";
 			if (dialog.ShowDialog() == DialogResult.OK)
-            {
 				LoadFile(dialog.FileName);
-            }
         }
 
         private void guna2TabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,27 +141,17 @@ namespace Python_IDE
         }
 
         private void iconButton6_Click(object sender, EventArgs e)
-        {
-			File.WriteAllText(currentPage.File, currentPage.CodeEditor.Text);
-        }
+			=> File.WriteAllText(currentPage.File, currentPage.CodeEditor.Text);
 
-        private void iconButton7_Click(object sender, EventArgs e)
-        {
-			tabs.TabPages.RemoveAt(tabs.SelectedIndex);
-		}
+		private void iconButton7_Click(object sender, EventArgs e)
+			=> tabs.TabPages.RemoveAt(tabs.SelectedIndex);
 
-        private void iconButton8_Click(object sender, EventArgs e)
+		private void iconButton8_Click(object sender, EventArgs e)
         {
-
 			// Even tho not the best implementation good enough
 			isTerminalHidden = true;
 			splitContainer1.SplitterDistance = splitContainer1.Height;
 		}
-
-        private void iconButton9_Click(object sender, EventArgs e)
-        {
-			Close();
-        }
 
         private void iconButton9_Click_1(object sender, EventArgs e)
         {
@@ -181,7 +164,10 @@ namespace Python_IDE
 
 		private async void SoftBlink(Control ctrl, Color c1, Color c2, short CycleTime_ms, bool BkClr)
 		{
-			var sw = new Stopwatch(); sw.Start();
+			// this is some really fancy code from github
+			// its fancy because of the stopwatch :o
+			var sw = new Stopwatch();
+			sw.Start();
 			short halfCycle = (short)Math.Round(CycleTime_ms * 0.5);
 			while (true)
 			{
@@ -197,8 +183,7 @@ namespace Python_IDE
 		}
 
 		private void iconButton10_Click(object sender, EventArgs e)
-        {
+			=> // open the link in the browser
 			Process.Start("https://discord.gg/4HTgUrzD");
-        }
-    }
+	}
 }
