@@ -9,4 +9,4 @@ We now have a [Discord server](https://discord.gg/4HTgUrzD), join us!
 
 # Changelog
 
-Added EXPERIMENTAL very basic autocompleter
+changelog can be found in [commits](https://github.com/CodeDiseaseDev/PyEase/commits/master)
