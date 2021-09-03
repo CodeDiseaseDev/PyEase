@@ -503,4 +503,3 @@ namespace PyEase
         private System.Windows.Forms.Label discordplug;
     }
 }
-
