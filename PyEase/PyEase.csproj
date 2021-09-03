@@ -7,7 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DDDACDA8-B75C-4F07-9857-BBDD2CDC1144}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Python_IDE</RootNamespace>
+    <RootNamespace>PyEase</RootNamespace>
     <AssemblyName>PyEase</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -241,6 +241,9 @@
     </Compile>
     <Compile Include="PythonPackage.Designer.cs">
       <DependentUpon>PythonPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundedButtonIcon.cs">
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
