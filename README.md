@@ -1,3 +1,5 @@
+### Big thanks to [charchatzo](https://github.com/charchatzo) for fixing a ton of bugs
+
 # PyEase
 Beginner friendly Python IDE
 
