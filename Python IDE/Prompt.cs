@@ -25,12 +25,13 @@ namespace Python_IDE
 
         public string input
         {
-            get => textBox1.Text;
-            set => textBox1.Text = value;
+            get => guna2TextBox1.Text;
+            set => guna2TextBox1.Text = value;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult = input != "" ? DialogResult.OK : DialogResult.Cancel;
             Close();
         }
 
@@ -40,9 +41,13 @@ namespace Python_IDE
             {
                 e.Handled = true;
                 e.SuppressKeyPress = true;
-                DialogResult = input != "" ? DialogResult.OK : DialogResult.Cancel;
                 button1_Click(null, null);
             }
+        }
+
+        private void Prompt_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
