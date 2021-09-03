@@ -43,7 +43,7 @@ namespace PyEase
             this.label1.Location = new System.Drawing.Point(9, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 17);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 3;
             this.label1.Text = "text";
             // 
             // guna2Button2
@@ -69,7 +69,7 @@ namespace PyEase
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(75, 23);
-            this.guna2Button2.TabIndex = 4;
+            this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "OK";
             this.guna2Button2.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -102,7 +102,7 @@ namespace PyEase
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Size = new System.Drawing.Size(323, 23);
-            this.guna2TextBox1.TabIndex = 5;
+            this.guna2TextBox1.TabIndex = 0;
             this.guna2TextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // Prompt
