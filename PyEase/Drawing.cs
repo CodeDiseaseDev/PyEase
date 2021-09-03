@@ -41,5 +41,11 @@ namespace PyEase
             path.CloseFigure();
             return path;
         }
+
+        public static Color Brighten(Color c, int offset)
+            => Color.FromArgb(c.R + offset, c.G + offset, c.B + offset);
+
+        public static Color Darken(Color c, int offset)
+            => Color.FromArgb(c.R - offset, c.G - offset, c.B - offset);
     }
 }
