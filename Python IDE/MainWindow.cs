@@ -185,5 +185,11 @@ namespace Python_IDE
 		private void iconButton10_Click(object sender, EventArgs e)
 			=> // open the link in the browser
 			Process.Start("https://discord.gg/4HTgUrzD");
-	}
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+			foreach (string a in Program.startupFiles)
+				LoadFile(a);
+        }
+    }
 }

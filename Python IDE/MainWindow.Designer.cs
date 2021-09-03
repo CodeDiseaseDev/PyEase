@@ -330,7 +330,7 @@ namespace Python_IDE
             this.iconButton9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.iconButton9.ForeColor = System.Drawing.Color.White;
             this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Terminal;
-            this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(201)))), ((int)(((byte)(166)))));
+            this.iconButton9.IconColor = System.Drawing.Color.Gray;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.IconSize = 30;
             this.iconButton9.Location = new System.Drawing.Point(132, 3);
@@ -464,6 +464,7 @@ namespace Python_IDE
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PyEase";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
