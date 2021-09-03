@@ -25,6 +25,7 @@ namespace Python_IDE
 			pages.Add(tabPage1);
 			currentPage = tabPage1;
 			guna2Panel1.Enabled = tabPage1.IsEditable;
+			SoftBlink(discordplug, Color.FromArgb(60,60,60), Color.FromArgb(200,200,200), 2000, false);
 		}
 
 		List<BTabPage> pages = new List<BTabPage>();
@@ -177,5 +178,27 @@ namespace Python_IDE
 				isTerminalHidden = false;
 			}
 		}
+
+		private async void SoftBlink(Control ctrl, Color c1, Color c2, short CycleTime_ms, bool BkClr)
+		{
+			var sw = new Stopwatch(); sw.Start();
+			short halfCycle = (short)Math.Round(CycleTime_ms * 0.5);
+			while (true)
+			{
+				await Task.Delay(1);
+				var n = sw.ElapsedMilliseconds % CycleTime_ms;
+				var per = (double)Math.Abs(n - halfCycle) / halfCycle;
+				var red = (short)Math.Round((c2.R - c1.R) * per) + c1.R;
+				var grn = (short)Math.Round((c2.G - c1.G) * per) + c1.G;
+				var blw = (short)Math.Round((c2.B - c1.B) * per) + c1.B;
+				var clr = Color.FromArgb(red, grn, blw);
+				if (BkClr) ctrl.BackColor = clr; else ctrl.ForeColor = clr;
+			}
+		}
+
+		private void iconButton10_Click(object sender, EventArgs e)
+        {
+			Process.Start("https://discord.gg/4HTgUrzD");
+        }
     }
 }

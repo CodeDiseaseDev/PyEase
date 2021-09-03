@@ -48,6 +48,8 @@ namespace Python_IDE
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconButton10 = new FontAwesome.Sharp.IconButton();
+            this.discordplug = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -285,6 +287,7 @@ namespace Python_IDE
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.iconButton10);
             this.guna2Panel2.Controls.Add(this.iconButton9);
             this.guna2Panel2.Controls.Add(this.iconButton5);
             this.guna2Panel2.Controls.Add(this.iconButton3);
@@ -292,7 +295,7 @@ namespace Python_IDE
             this.guna2Panel2.Location = new System.Drawing.Point(188, 7);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(175, 38);
+            this.guna2Panel2.Size = new System.Drawing.Size(216, 38);
             this.guna2Panel2.TabIndex = 13;
             // 
             // iconButton9
@@ -411,12 +414,46 @@ namespace Python_IDE
             this.iconPictureBox1.UseGdi = true;
             this.iconPictureBox1.UseIconCache = true;
             // 
+            // iconButton10
+            // 
+            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.iconButton10.FlatAppearance.BorderSize = 0;
+            this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.iconButton10.ForeColor = System.Drawing.Color.White;
+            this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.Discord;
+            this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton10.IconSize = 30;
+            this.iconButton10.Location = new System.Drawing.Point(175, 2);
+            this.iconButton10.Name = "iconButton10";
+            this.iconButton10.Size = new System.Drawing.Size(37, 33);
+            this.iconButton10.TabIndex = 11;
+            this.iconButton10.Text = " ";
+            this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton10.UseVisualStyleBackColor = false;
+            this.iconButton10.Click += new System.EventHandler(this.iconButton10_Click);
+            // 
+            // discordplug
+            // 
+            this.discordplug.AutoSize = true;
+            this.discordplug.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discordplug.ForeColor = System.Drawing.Color.White;
+            this.discordplug.Location = new System.Drawing.Point(410, 15);
+            this.discordplug.Name = "discordplug";
+            this.discordplug.Size = new System.Drawing.Size(197, 21);
+            this.discordplug.TabIndex = 14;
+            this.discordplug.Text = "< We have a Discord now";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1282, 807);
+            this.Controls.Add(this.discordplug);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.splitContainer1);
@@ -436,6 +473,7 @@ namespace Python_IDE
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -458,6 +496,8 @@ namespace Python_IDE
         private FontAwesome.Sharp.IconButton iconButton9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton iconButton10;
+        private System.Windows.Forms.Label discordplug;
     }
 }
 
