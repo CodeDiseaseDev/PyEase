@@ -5,4 +5,4 @@ Beginner friendly Python IDE
 
 We now have a [Discord server](https://discord.gg/4HTgUrzD), join us!
 
-![](https://media.discordapp.net/attachments/874778832102645843/883161049388425216/ezgif-2-704fe75fc246.png)
+![](https://media.discordapp.net/attachments/874778832102645843/883161257694363688/ezgif-2-704fe75fc246.gif)
