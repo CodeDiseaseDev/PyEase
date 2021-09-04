@@ -130,26 +130,36 @@ namespace PyEase
 			iconButton1.Enabled = false;
 		}
 
-		private void KillProcessAndChildren(string name)
+		private void EndProcessTree(string imageName)
 		{
-			
+			Process.Start(new ProcessStartInfo
+			{
+				FileName = "taskkill",
+				Arguments = $"/im {imageName} /f /t",
+				CreateNoWindow = true,
+				UseShellExecute = false
+			}).WaitForExit();
 		}
+
 
 		private void iconButton2_Click(object sender, EventArgs e)
-        {
+		{
 			foreach (Process p in Process.GetProcessesByName("python"))
-            {
+			{
 				try
-                {
-					KillProcessAndChildren("py.exe");
-				} catch
-                {
+				{
+					EndProcessTree("py.exe");
+				}
+				catch
+				{
 					MessageBox.Show($"Failed to kill process: {p.MainModule.FileName} ({p.Id})");
-                }
-            }
+				}
+			}
+			iconButton1.Enabled = true;
+
 		}
 
-        private void iconButton3_Click(object sender, EventArgs e)
+		private void iconButton3_Click(object sender, EventArgs e)
 			=> new PackageManager();
 
 		private void iconButton4_Click(object sender, EventArgs e)
