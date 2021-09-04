@@ -5,7 +5,7 @@ Beginner friendly Python IDE
 
 We now have a [Discord server](https://discord.gg/4HTgUrzD), join us!
 
-![](https://media.discordapp.net/attachments/874778832102645843/883161257694363688/ezgif-2-704fe75fc246.gif)
+![](https://media.discordapp.net/attachments/879585329873571850/883601079353376808/unknown.png)
 
 # Changelog
 
