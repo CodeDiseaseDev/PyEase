@@ -13,4 +13,4 @@ changelog can be found in [commits](https://github.com/CodeDiseaseDev/PyEase/com
 
 # Technologies used
 
-WinForms, ScintillaNET Guna.UI2, ConsoleControl, Costura, FontAwesome.Sharp
+WinForms, ScintillaNET, Guna.UI2, ConsoleControl, Costura, FontAwesome.Sharp
