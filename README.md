@@ -1,7 +1,9 @@
-### Big thanks to [charchatzo](https://github.com/charchatzo) for fixing a ton of bugs
+## PyEase
 
-# PyEase
 Beginner friendly Python IDE
+
+# You can [download](https://github.com/CodeDiseaseDev/PyEase/releases) here
+### Big thanks to [charchatzo](https://github.com/charchatzo) for fixing a ton of bugs
 
 We now have a [Discord server](https://discord.gg/4HTgUrzD), join us!
 
