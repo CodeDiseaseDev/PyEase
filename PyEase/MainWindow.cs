@@ -151,7 +151,7 @@ namespace PyEase
 				EndProcessTree("p.exe");
 			} catch
             {
-				MessageBox.Show($"Failed to kill process: {p.MainModule.FileName} ({p.Id})");
+				MessageBox.Show("Failed to kill python process");
             }
 		}
 
