@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -39,6 +40,8 @@ namespace PyEase
 			SyntaxHighlighting(scintilla);
 			scintilla.AutoCIgnoreCase = true;
             scintilla.Insert += (sender, e) => AutoComplete(sender, e, scintilla);
+            scintilla.InsertCheck += (sender, e) => Scintilla_InsertCheck(sender, e, scintilla);
+            scintilla.CharAdded += (sender, e) => scintilla1_CharAdded(sender, e, scintilla);
 			scintilla.Text = File.ReadAllText(file);
 			BTabPage page = new BTabPage();
 			page.CodeEditor = scintilla;
@@ -53,7 +56,15 @@ namespace PyEase
 			tabs.SelectedIndex = tabs.TabCount - 1;
 		}
 
-        private void AutoComplete(object sender, ModificationEventArgs e, Scintilla scintilla)
+		private void scintilla1_CharAdded(object sender, CharAddedEventArgs e, Scintilla scintilla)
+		{
+		}
+
+		private void Scintilla_InsertCheck(object sender, InsertCheckEventArgs e, Scintilla scintilla)
+        {
+		}
+
+		private void AutoComplete(object sender, ModificationEventArgs e, Scintilla scintilla)
         {
 			var keywords = "__init__ __name__ print False None True and as assert async await break class continue def del elif else except finally for from global if import in is lambda nonlocal not or pass raise return try while with yield";
 			var currentPos = scintilla.CurrentPosition;
@@ -119,11 +130,35 @@ namespace PyEase
 			iconButton1.Enabled = false;
 		}
 
-        private void iconButton2_Click(object sender, EventArgs e)
+		private void KillProcessAndChildren(int pid)
+		{
+			ManagementObjectSearcher searcher = new ManagementObjectSearcher("Select * From Win32_Process Where ParentProcessID=" + pid);
+			ManagementObjectCollection moc = searcher.Get();
+			foreach (ManagementObject mo in moc)
+			{
+				KillProcessAndChildren(Convert.ToInt32(mo["ProcessID"]));
+			}
+			try
+			{
+				Process proc = Process.GetProcessById(pid);
+				proc.Kill();
+			}
+			catch (ArgumentException) {}
+		}
+
+		private void iconButton2_Click(object sender, EventArgs e)
         {
 			foreach (Process p in Process.GetProcessesByName("python"))
-				p.Kill();
-        }
+            {
+				try
+                {
+					KillProcessAndChildren(p.Id);
+				} catch
+                {
+					MessageBox.Show($"Failed to kill process: {p.MainModule.FileName} ({p.Id})");
+                }
+            }
+		}
 
         private void iconButton3_Click(object sender, EventArgs e)
 			=> new PackageManager();
@@ -175,7 +210,7 @@ namespace PyEase
         {
 			if (isTerminalHidden)
 			{
-				splitContainer1.SplitterDistance = 500;
+				splitContainer1.SplitterDistance = 300;
 				isTerminalHidden = false;
 			}
 		}
