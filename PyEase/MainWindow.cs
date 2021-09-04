@@ -66,6 +66,13 @@ namespace PyEase
 				e.SuppressKeyPress = true;
 				iconButton6_Click(null, null);
 			}
+
+			if (e.Control && e.KeyCode == Keys.R)
+            {
+				e.Handled = true;
+				e.SuppressKeyPress = true;
+				iconButton1_Click(null, null);
+			}
 		}
 
 		private void scintilla1_TextChanged(object sender, EventArgs e, BTabPage page)
@@ -135,6 +142,7 @@ namespace PyEase
 
 		private void iconButton1_Click(object sender, EventArgs e)
         {
+			iconButton6_Click(null, null);
 			consoleControl1.InternalRichTextBox.ResetText();
 			consoleControl1.InternalRichTextBox.AppendText($"> python {currentPage.File}\n\n");
 			string code = currentPage.CodeEditor.Text;
