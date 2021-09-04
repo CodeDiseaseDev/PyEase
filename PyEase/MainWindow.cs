@@ -149,7 +149,15 @@ namespace PyEase
 		private void iconButton2_Click(object sender, EventArgs e)
         {
 			foreach (Process p in Process.GetProcessesByName("python"))
-				KillProcessAndChildren(p.Id);
+            {
+				try
+                {
+					KillProcessAndChildren(p.Id);
+				} catch
+                {
+					MessageBox.Show($"Failed to kill process: {p.MainModule.FileName} ({p.Id})");
+                }
+            }
 		}
 
         private void iconButton3_Click(object sender, EventArgs e)
