@@ -41,5 +41,20 @@ namespace PyEase
             path.CloseFigure();
             return path;
         }
+
+        private static int max(int val, int max) => val > max ? max : val;
+        private static int min(int val, int min) => val < min ? min : val;
+
+        public static Color Brighten(Color c, int offset)
+            => Color.FromArgb(
+                max(c.R + offset, 255),
+                max(c.G + offset, 255),
+                max(c.B + offset, 255));
+
+        public static Color Darken(Color c, int offset)
+            => Color.FromArgb(
+                min(c.R - offset, 0),
+                min(c.G - offset, 0),
+                min(c.B - offset, 0));
     }
 }

@@ -76,7 +76,7 @@ namespace PyEase
             this.consoleControl1.Name = "consoleControl1";
             this.consoleControl1.SendKeyboardCommandsToProcess = true;
             this.consoleControl1.ShowDiagnostics = false;
-            this.consoleControl1.Size = new System.Drawing.Size(1258, 177);
+            this.consoleControl1.Size = new System.Drawing.Size(851, 117);
             this.consoleControl1.TabIndex = 3;
             // 
             // splitContainer1
@@ -98,8 +98,8 @@ namespace PyEase
             this.splitContainer1.Panel2.Controls.Add(this.iconButton8);
             this.splitContainer1.Panel2.Controls.Add(this.consoleControl1);
             this.splitContainer1.Panel2MinSize = 0;
-            this.splitContainer1.Size = new System.Drawing.Size(1258, 734);
-            this.splitContainer1.SplitterDistance = 553;
+            this.splitContainer1.Size = new System.Drawing.Size(851, 489);
+            this.splitContainer1.SplitterDistance = 368;
             this.splitContainer1.TabIndex = 4;
             // 
             // guna2Panel1
@@ -169,7 +169,7 @@ namespace PyEase
             // 
             // iconButton9
             // 
-            this.iconButton9.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton9.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton9.FlatAppearance.BorderSize = 0;
@@ -193,7 +193,7 @@ namespace PyEase
             // 
             // iconButton3
             // 
-            this.iconButton3.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton3.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton3.FlatAppearance.BorderSize = 0;
@@ -217,7 +217,7 @@ namespace PyEase
             // 
             // iconButton5
             // 
-            this.iconButton5.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton5.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton5.FlatAppearance.BorderSize = 0;
@@ -241,7 +241,7 @@ namespace PyEase
             // 
             // iconButton4
             // 
-            this.iconButton4.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton4.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton4.FlatAppearance.BorderSize = 0;
@@ -264,7 +264,7 @@ namespace PyEase
             // 
             // roundedButtonIcon1
             // 
-            this.roundedButtonIcon1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.roundedButtonIcon1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.roundedButtonIcon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.roundedButtonIcon1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.roundedButtonIcon1.FlatAppearance.BorderSize = 0;
@@ -288,7 +288,7 @@ namespace PyEase
             // 
             // iconButton10
             // 
-            this.iconButton10.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton10.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton10.FlatAppearance.BorderSize = 0;
@@ -312,7 +312,7 @@ namespace PyEase
             // 
             // iconButton1
             // 
-            this.iconButton1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton1.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton1.FlatAppearance.BorderSize = 0;
@@ -336,7 +336,7 @@ namespace PyEase
             // 
             // iconButton7
             // 
-            this.iconButton7.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton7.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton7.FlatAppearance.BorderSize = 0;
@@ -360,7 +360,7 @@ namespace PyEase
             // 
             // iconButton2
             // 
-            this.iconButton2.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton2.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton2.FlatAppearance.BorderSize = 0;
@@ -384,7 +384,7 @@ namespace PyEase
             // 
             // iconButton6
             // 
-            this.iconButton6.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.iconButton6.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton6.FlatAppearance.BorderSize = 0;
@@ -415,7 +415,7 @@ namespace PyEase
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(1258, 553);
+            this.tabs.Size = new System.Drawing.Size(851, 368);
             this.tabs.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabs.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.tabs.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -447,7 +447,7 @@ namespace PyEase
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1250, 515);
+            this.tabPage1.Size = new System.Drawing.Size(843, 330);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Welcome";
             // 
@@ -461,7 +461,7 @@ namespace PyEase
             this.guna2Panel3.Location = new System.Drawing.Point(6, 6);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1238, 503);
+            this.guna2Panel3.Size = new System.Drawing.Size(831, 318);
             this.guna2Panel3.TabIndex = 12;
             this.guna2Panel3.UseTransparentBackground = true;
             // 
@@ -474,7 +474,7 @@ namespace PyEase
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1238, 503);
+            this.label1.Size = new System.Drawing.Size(831, 318);
             this.label1.TabIndex = 1;
             this.label1.Text = "PyEase Pre-release\r\nVersion v";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,11 +489,11 @@ namespace PyEase
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Python;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 509;
+            this.iconPictureBox1.IconSize = 324;
             this.iconPictureBox1.Location = new System.Drawing.Point(3, 3);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(1244, 509);
+            this.iconPictureBox1.Size = new System.Drawing.Size(837, 324);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
@@ -503,7 +503,7 @@ namespace PyEase
             // iconButton8
             // 
             this.iconButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton8.Backcolor = System.Drawing.Color.Transparent;
+            this.iconButton8.Backcolor = System.Drawing.Color.Black;
             this.iconButton8.BackColor = System.Drawing.Color.Black;
             this.iconButton8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.iconButton8.FlatAppearance.BorderSize = 0;
@@ -514,7 +514,7 @@ namespace PyEase
             this.iconButton8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.IconSize = 30;
-            this.iconButton8.Location = new System.Drawing.Point(1217, 3);
+            this.iconButton8.Location = new System.Drawing.Point(810, 3);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Size = new System.Drawing.Size(37, 33);
             this.iconButton8.TabIndex = 12;
@@ -529,7 +529,7 @@ namespace PyEase
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(1282, 807);
+            this.ClientSize = new System.Drawing.Size(875, 562);
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.discordplug);
@@ -537,7 +537,7 @@ namespace PyEase
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(471, 462);
+            this.MinimumSize = new System.Drawing.Size(769, 462);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PyEase";
