@@ -60,8 +60,10 @@ namespace PyEase
 
 		private void scintilla1_KeyDown(object sender, KeyEventArgs e, BTabPage page)
 		{
+			// i will work on a cleaner solution later
 			if (e.Control && e.KeyCode == Keys.S)
 			{
+				// save file
                 e.Handled = true;
 				e.SuppressKeyPress = true;
 				iconButton6_Click(null, null);
@@ -69,9 +71,26 @@ namespace PyEase
 
 			if (e.Control && e.KeyCode == Keys.R)
             {
+				// run script
 				e.Handled = true;
 				e.SuppressKeyPress = true;
 				iconButton1_Click(null, null);
+			}
+
+			if (e.Control && e.KeyCode == Keys.D)
+            {
+				// close current tab
+				e.Handled = true;
+				e.SuppressKeyPress = true;
+				iconButton7_Click(null, null);
+			}
+
+			if (e.Control && e.KeyCode == Keys.F)
+			{
+				// stop python process
+				e.Handled = true;
+				e.SuppressKeyPress = true;
+				iconButton2_Click(null, null);
 			}
 		}
 
