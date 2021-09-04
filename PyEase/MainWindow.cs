@@ -148,7 +148,7 @@ namespace PyEase
 		{
 			try
             {
-				EndProcessTree("p.exe");
+				EndProcessTree("py.exe");
 			} catch
             {
 				MessageBox.Show("Failed to kill python process");
