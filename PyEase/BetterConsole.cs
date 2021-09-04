@@ -17,6 +17,12 @@ namespace PyEase
         public BetterConsole()
         {
             InternalRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            Resize += BetterConsole_Resize;
+        }
+
+        private void BetterConsole_Resize(object sender, EventArgs e)
+        {
+            Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs e)
