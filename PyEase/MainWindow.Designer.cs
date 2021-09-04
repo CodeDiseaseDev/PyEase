@@ -30,7 +30,6 @@ namespace PyEase
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.consoleControl1 = new ConsoleControl.ConsoleControl();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -47,12 +46,13 @@ namespace PyEase
             this.iconButton7 = new PyEase.RoundedButtonIcon();
             this.iconButton2 = new PyEase.RoundedButtonIcon();
             this.iconButton6 = new PyEase.RoundedButtonIcon();
-            this.tabs = new Guna.UI2.WinForms.Guna2TabControl();
+            this.tabs = new PyEase.BetterTabs();
             this.tabPage1 = new PyEase.BTabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton8 = new PyEase.RoundedButtonIcon();
+            this.consoleControl1 = new PyEase.BetterConsole();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,18 +66,6 @@ namespace PyEase
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // consoleControl1
-            // 
-            this.consoleControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consoleControl1.IsInputEnabled = true;
-            this.consoleControl1.Location = new System.Drawing.Point(0, 0);
-            this.consoleControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.consoleControl1.Name = "consoleControl1";
-            this.consoleControl1.SendKeyboardCommandsToProcess = true;
-            this.consoleControl1.ShowDiagnostics = false;
-            this.consoleControl1.Size = new System.Drawing.Size(851, 117);
-            this.consoleControl1.TabIndex = 3;
             // 
             // splitContainer1
             // 
@@ -99,7 +87,7 @@ namespace PyEase
             this.splitContainer1.Panel2.Controls.Add(this.consoleControl1);
             this.splitContainer1.Panel2MinSize = 0;
             this.splitContainer1.Size = new System.Drawing.Size(851, 489);
-            this.splitContainer1.SplitterDistance = 368;
+            this.splitContainer1.SplitterDistance = 320;
             this.splitContainer1.TabIndex = 4;
             // 
             // guna2Panel1
@@ -415,7 +403,7 @@ namespace PyEase
             this.tabs.Location = new System.Drawing.Point(0, 0);
             this.tabs.Name = "tabs";
             this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(851, 368);
+            this.tabs.Size = new System.Drawing.Size(851, 320);
             this.tabs.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabs.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.tabs.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -447,7 +435,7 @@ namespace PyEase
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(843, 330);
+            this.tabPage1.Size = new System.Drawing.Size(843, 282);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Welcome";
             // 
@@ -461,7 +449,7 @@ namespace PyEase
             this.guna2Panel3.Location = new System.Drawing.Point(6, 6);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(831, 318);
+            this.guna2Panel3.Size = new System.Drawing.Size(831, 270);
             this.guna2Panel3.TabIndex = 12;
             this.guna2Panel3.UseTransparentBackground = true;
             // 
@@ -474,7 +462,7 @@ namespace PyEase
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(831, 318);
+            this.label1.Size = new System.Drawing.Size(831, 270);
             this.label1.TabIndex = 1;
             this.label1.Text = "PyEase Pre-release\r\nVersion v";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,11 +477,11 @@ namespace PyEase
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Python;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 324;
+            this.iconPictureBox1.IconSize = 276;
             this.iconPictureBox1.Location = new System.Drawing.Point(3, 3);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(837, 324);
+            this.iconPictureBox1.Size = new System.Drawing.Size(837, 276);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
@@ -523,6 +511,18 @@ namespace PyEase
             this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton8.UseVisualStyleBackColor = false;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
+            // 
+            // consoleControl1
+            // 
+            this.consoleControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleControl1.IsInputEnabled = true;
+            this.consoleControl1.Location = new System.Drawing.Point(0, 0);
+            this.consoleControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.consoleControl1.Name = "consoleControl1";
+            this.consoleControl1.SendKeyboardCommandsToProcess = true;
+            this.consoleControl1.ShowDiagnostics = false;
+            this.consoleControl1.Size = new System.Drawing.Size(851, 165);
+            this.consoleControl1.TabIndex = 3;
             // 
             // MainWindow
             // 
@@ -561,12 +561,12 @@ namespace PyEase
         }
 
         #endregion
-        private ConsoleControl.ConsoleControl consoleControl1;
+        private PyEase.BetterConsole consoleControl1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private PyEase.RoundedButtonIcon iconButton1;
         private PyEase.RoundedButtonIcon iconButton2;
         private PyEase.RoundedButtonIcon iconButton3;
-        private Guna.UI2.WinForms.Guna2TabControl tabs;
+        private PyEase.BetterTabs tabs;
         private PyEase.RoundedButtonIcon iconButton4;
         private PyEase.RoundedButtonIcon iconButton5;
         private PyEase.RoundedButtonIcon iconButton6;
