@@ -53,7 +53,25 @@ namespace PyEase
 			scintilla.Dock = DockStyle.Fill;
             tabs.TabPages.Add(page);
 			pages.Add(page);
+			scintilla.KeyDown += (sender, e) => scintilla1_KeyDown(sender, e, page);
+			scintilla.TextChanged += (sender, e) => scintilla1_TextChanged(sender, e, page);
 			tabs.SelectedIndex = tabs.TabCount - 1;
+		}
+
+		private void scintilla1_KeyDown(object sender, KeyEventArgs e, BTabPage page)
+		{
+			if (e.Control && e.KeyCode == Keys.S)
+			{
+                e.Handled = true;
+				e.SuppressKeyPress = true;
+				iconButton6_Click(null, null);
+			}
+		}
+
+		private void scintilla1_TextChanged(object sender, EventArgs e, BTabPage page)
+		{
+			if (!page.Unsaved)
+				page.Unsaved = true;
 		}
 
 		private void scintilla1_CharAdded(object sender, CharAddedEventArgs e, Scintilla scintilla)
@@ -140,21 +158,30 @@ namespace PyEase
 				Arguments = $"/im {imageName} /f /t",
 				CreateNoWindow = true,
 				UseShellExecute = false
-			}).WaitForExit();
+			});
 		}
-
 
 		private void iconButton2_Click(object sender, EventArgs e)
 		{
 			try
             {
-				EndProcessTree("py.exe");
+				Task.Run(() =>
+				{
+					// python.exe usually the correct name in most cases can go first
+					EndProcessTree("python.exe");
+
+					// py.exe probably the second most common goes next
+					EndProcessTree("py.exe");
+
+					// python3.exe is a possibility too so i'll leave it here
+					EndProcessTree("python3.exe");
+				});
 			} catch
             {
 				MessageBox.Show("Failed to kill python process");
             }
 		}
-
+		
 		private void iconButton3_Click(object sender, EventArgs e)
 			=> new PackageManager();
 
@@ -189,7 +216,10 @@ namespace PyEase
         }
 
         private void iconButton6_Click(object sender, EventArgs e)
-			=> File.WriteAllText(currentPage.File, currentPage.CodeEditor.Text);
+        {
+			File.WriteAllText(currentPage.File, currentPage.CodeEditor.Text);
+			currentPage.Unsaved = false;
+		}
 
 		private void iconButton7_Click(object sender, EventArgs e)
 			=> tabs.TabPages.RemoveAt(tabs.SelectedIndex);

@@ -27,5 +27,16 @@ namespace PyEase
             get;
             set;
         }
+        public bool Unsaved
+        {
+            set
+            {
+                if (value && !Text.EndsWith("*"))
+                    Text += "*";
+                else if (!value && Text.EndsWith("*"))
+                    Text = Text.Substring(0, Text.Length - 1);
+            }
+            get => Text.EndsWith("*");
+        }
     }
 }
