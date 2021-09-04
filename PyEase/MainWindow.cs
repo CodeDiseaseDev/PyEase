@@ -130,20 +130,9 @@ namespace PyEase
 			iconButton1.Enabled = false;
 		}
 
-		private void KillProcessAndChildren(int pid)
+		private void KillProcessAndChildren(string name)
 		{
-			ManagementObjectSearcher searcher = new ManagementObjectSearcher("Select * From Win32_Process Where ParentProcessID=" + pid);
-			ManagementObjectCollection moc = searcher.Get();
-			foreach (ManagementObject mo in moc)
-			{
-				KillProcessAndChildren(Convert.ToInt32(mo["ProcessID"]));
-			}
-			try
-			{
-				Process proc = Process.GetProcessById(pid);
-				proc.Kill();
-			}
-			catch (ArgumentException) {}
+			
 		}
 
 		private void iconButton2_Click(object sender, EventArgs e)
@@ -152,7 +141,7 @@ namespace PyEase
             {
 				try
                 {
-					KillProcessAndChildren(p.Id);
+					KillProcessAndChildren("py.exe");
 				} catch
                 {
 					MessageBox.Show($"Failed to kill process: {p.MainModule.FileName} ({p.Id})");
