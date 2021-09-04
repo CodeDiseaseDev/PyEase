@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -129,11 +130,27 @@ namespace PyEase
 			iconButton1.Enabled = false;
 		}
 
-        private void iconButton2_Click(object sender, EventArgs e)
+		private void KillProcessAndChildren(int pid)
+		{
+			ManagementObjectSearcher searcher = new ManagementObjectSearcher("Select * From Win32_Process Where ParentProcessID=" + pid);
+			ManagementObjectCollection moc = searcher.Get();
+			foreach (ManagementObject mo in moc)
+			{
+				KillProcessAndChildren(Convert.ToInt32(mo["ProcessID"]));
+			}
+			try
+			{
+				Process proc = Process.GetProcessById(pid);
+				proc.Kill();
+			}
+			catch (ArgumentException) {}
+		}
+
+		private void iconButton2_Click(object sender, EventArgs e)
         {
 			foreach (Process p in Process.GetProcessesByName("python"))
-				p.Kill();
-        }
+				KillProcessAndChildren(p.Id);
+		}
 
         private void iconButton3_Click(object sender, EventArgs e)
 			=> new PackageManager();
@@ -185,7 +202,7 @@ namespace PyEase
         {
 			if (isTerminalHidden)
 			{
-				splitContainer1.SplitterDistance = 500;
+				splitContainer1.SplitterDistance = 300;
 				isTerminalHidden = false;
 			}
 		}
