@@ -205,6 +205,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BetterConsole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BetterTabs.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BTabPage.cs">
       <SubType>Component</SubType>
     </Compile>
