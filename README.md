@@ -10,3 +10,7 @@ We now have a [Discord server](https://discord.gg/4HTgUrzD), join us!
 # Changelog
 
 changelog can be found in [commits](https://github.com/CodeDiseaseDev/PyEase/commits/master)
+
+# Technologies used
+
+WinForms, ScintillaNET Guna.UI2, ConsoleControl, Costura, FontAwesome.Sharp
