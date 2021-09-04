@@ -122,29 +122,27 @@ namespace PyEase
 			string code = currentPage.CodeEditor.Text;
 			if (splitContainer1.SplitterDistance < 5)
 				splitContainer1.SplitterDistance = 300;
+			iconButton1.Enabled = false;
 			python.RunScript(code.Split('\n'), consoleControl1, () =>
 			{
 				consoleControl1.InternalRichTextBox.AppendText("\n[Process exited]");
 				iconButton1.Enabled = true;
 			});
-			iconButton1.Enabled = false;
+			
+
 		}
 
-		private void KillProcessAndChildren(int pid)
+		private static void EndProcessTree(string imageName)
 		{
-			ManagementObjectSearcher searcher = new ManagementObjectSearcher("Select * From Win32_Process Where ParentProcessID=" + pid);
-			ManagementObjectCollection moc = searcher.Get();
-			foreach (ManagementObject mo in moc)
+			Process.Start(new ProcessStartInfo
 			{
-				KillProcessAndChildren(Convert.ToInt32(mo["ProcessID"]));
-			}
-			try
-			{
-				Process proc = Process.GetProcessById(pid);
-				proc.Kill();
-			}
-			catch (ArgumentException) {}
+				FileName = "taskkill",
+				Arguments = $"/im {imageName} /f /t",
+				CreateNoWindow = true,
+				UseShellExecute = false
+			}).WaitForExit();
 		}
+
 
 		private void iconButton2_Click(object sender, EventArgs e)
         {
@@ -152,15 +150,17 @@ namespace PyEase
             {
 				try
                 {
-					KillProcessAndChildren(p.Id);
+					EndProcessTree("py.exe");
 				} catch
                 {
 					MessageBox.Show($"Failed to kill process: {p.MainModule.FileName} ({p.Id})");
                 }
             }
+			iconButton1.Enabled = true;
+
 		}
 
-        private void iconButton3_Click(object sender, EventArgs e)
+		private void iconButton3_Click(object sender, EventArgs e)
 			=> new PackageManager();
 
 		private void iconButton4_Click(object sender, EventArgs e)
