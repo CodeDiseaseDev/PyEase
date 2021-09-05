@@ -139,7 +139,7 @@ namespace PyEase
 			scintilla.Margins[1].Width = 0;
 			scintilla.SetSelectionBackColor(true, IntToColor(0x353535));
 			scintilla.StyleClearAll();
-			
+			a
 			scintilla.Styles[Style.Python.Identifier].ForeColor = IntToColor(0xD0DAE2);
 			scintilla.Styles[Style.Python.CommentLine].ForeColor = IntToColor(0xABB2BF);
 			scintilla.Styles[Style.Python.Number].ForeColor = IntToColor(0xE5C07B);
