@@ -102,7 +102,6 @@ namespace PyEase
             this.customTabMenu1.Name = "customTabMenu1";
             this.customTabMenu1.Size = new System.Drawing.Size(729, 26);
             this.customTabMenu1.TabIndex = 9;
-            this.customTabMenu1.tabs = null;
             this.customTabMenu1.Text = "customTabMenu1";
             // 
             // tabs

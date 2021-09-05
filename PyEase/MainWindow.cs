@@ -156,11 +156,9 @@ namespace PyEase
 			scintilla.Lexer = Lexer.Python;
 			
 			scintilla.SetKeywords(1, keywords);
-
-			
 		}
 
-			public static Color IntToColor(int rgb)
+		public static Color IntToColor(int rgb)
 			=> Color.FromArgb(255, (byte)(rgb >> 16), (byte)(rgb >> 8), (byte)rgb);
 
 		private void iconButton1_Click(object sender, EventArgs e)
