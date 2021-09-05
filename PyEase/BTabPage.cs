@@ -21,6 +21,8 @@ namespace PyEase
             get => file;
             set
             {
+                if (value == null)
+                    return;
                 file = value;
                 Text = Path.GetFileName(value);
             }

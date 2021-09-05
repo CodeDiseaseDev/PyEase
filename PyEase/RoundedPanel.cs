@@ -5,30 +5,30 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 
 namespace PyEase
 {
-    class BetterConsole : ConsoleControl.ConsoleControl
+    class RoundedPanel : Panel
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
-        public BetterConsole()
-        {
-            InternalRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            Resize += BetterConsole_Resize;
-        }
+        private int _cornerRadius = 12;
 
-        private void BetterConsole_Resize(object sender, EventArgs e)
+        public int CornerRadius
         {
-            Invalidate();
+            get => _cornerRadius;
+            set
+            {
+                _cornerRadius = value;
+                Invalidate();
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(1, 1, Width, Height, 6, 6));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(1, 1, Width, Height, CornerRadius, CornerRadius));
         }
     }
 }

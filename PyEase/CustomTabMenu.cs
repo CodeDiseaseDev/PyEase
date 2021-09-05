@@ -18,6 +18,8 @@ namespace PyEase
             get => _tabs;
             set
             {
+                if (value == null)
+                    return;
                 _tabs = value;
                 _tabs.SelectedIndexChanged += _tabs_SelectedIndexChanged;
             }
@@ -79,13 +81,13 @@ namespace PyEase
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             Rectangle r = new Rectangle(0, 0, Width - 1, Height - 1);
             Color c = Color.FromArgb(50, 50, 50);
-            graphics.FillPath(new SolidBrush(c), Drawing.RoundedRect(r, 6, true, false));
-            graphics.DrawPath(new Pen(c), Drawing.RoundedRect(r, 6, true, false));
+            //graphics.FillPath(new SolidBrush(c), Drawing.RoundedRect(r, 6, true, false));
+            //graphics.DrawPath(new Pen(c), Drawing.RoundedRect(r, 6, true, false));
             int x = 0;
             foreach (BTabPage page in TabPages)
             {
                 var size = graphics.MeasureString(page.Text, Font);
-                int width = (int)size.Width + 20;
+                int width = (int)size.Width + 40;
                 page.TabRectangle = new Rectangle(x, 0, width, Height);
                 Color a = Color.FromArgb(65, 65, 65);
                 if (tabs.SelectedIndex == page.Index)
@@ -93,7 +95,7 @@ namespace PyEase
                 graphics.FillPath(new SolidBrush(a), Drawing.RoundedRect(page.TabRectangle, 6, true, false));
                 graphics.DrawPath(new Pen(a), Drawing.RoundedRect(page.TabRectangle, 6, true, false));
                 graphics.DrawString(page.Text, Font, Brushes.White, x + (width / 2) - (size.Width / 2), (Height / 2) - (size.Height / 2));
-                x += width + 3;
+                x += width + 2;
             }
         }
     }

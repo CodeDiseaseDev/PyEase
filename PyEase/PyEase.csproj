@@ -255,6 +255,9 @@
     <Compile Include="RoundedButtonIcon.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
