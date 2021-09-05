@@ -145,7 +145,7 @@ namespace PyEase
 			scintilla.Styles[Style.Python.CommentLine].ForeColor = IntToColor(0xABB2BF);
 			scintilla.Styles[Style.Python.Number].ForeColor = IntToColor(0xE5C07B);
 			scintilla.Styles[Style.Python.String].ForeColor = IntToColor(0x98C379);
-			scintilla.Styles[Style.Python.Character].ForeColor = IntToColor(0xFFF00);
+			scintilla.Styles[Style.Python.Character].ForeColor = IntToColor(0x98C379);
 			scintilla.Styles[Style.Python.Operator].ForeColor = IntToColor(0xE0E0E0);
 			scintilla.Styles[Style.Python.Word].ForeColor = IntToColor(0x48A8EE);
 			scintilla.Styles[Style.Python.Word2].ForeColor = IntToColor(0xE06C75);
