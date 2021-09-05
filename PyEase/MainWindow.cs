@@ -142,15 +142,15 @@ namespace PyEase
 			scintilla.StyleClearAll();
 			
 			scintilla.Styles[Style.Python.Identifier].ForeColor = IntToColor(0xD0DAE2);
-			scintilla.Styles[Style.Python.CommentLine].ForeColor = IntToColor(0x40BF57);
-			scintilla.Styles[Style.Python.Number].ForeColor = IntToColor(0xFFFF00);
-			scintilla.Styles[Style.Python.String].ForeColor = IntToColor(0xFFFF00);
-			scintilla.Styles[Style.Python.Character].ForeColor = IntToColor(0xFFFF00);
+			scintilla.Styles[Style.Python.CommentLine].ForeColor = IntToColor(0xABB2BF);
+			scintilla.Styles[Style.Python.Number].ForeColor = IntToColor(0xE5C07B);
+			scintilla.Styles[Style.Python.String].ForeColor = IntToColor(0x98C379);
+			scintilla.Styles[Style.Python.Character].ForeColor = IntToColor(0xFFF00);
 			scintilla.Styles[Style.Python.Operator].ForeColor = IntToColor(0xE0E0E0);
 			scintilla.Styles[Style.Python.Word].ForeColor = IntToColor(0x48A8EE);
-			scintilla.Styles[Style.Python.Word2].ForeColor = IntToColor(0xF98906);
-			scintilla.Styles[Style.Python.ClassName].ForeColor = IntToColor(0x48A8EE);
-			scintilla.Styles[Style.Python.DefName].ForeColor = IntToColor(0x48A8EE);
+			scintilla.Styles[Style.Python.Word2].ForeColor = IntToColor(0xE06C75);
+			scintilla.Styles[Style.Python.ClassName].ForeColor = IntToColor(0xE06C75);
+			scintilla.Styles[Style.Python.DefName].ForeColor = IntToColor(0x56B6C2);
 			scintilla.Styles[Style.Python.StringEol].ForeColor = IntToColor(0xFF3000);
 			scintilla.Styles[Style.Python.Decorator].ForeColor = IntToColor(0xf04444);
 
