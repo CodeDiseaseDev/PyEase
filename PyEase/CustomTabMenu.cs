@@ -74,29 +74,28 @@ namespace PyEase
             Invalidate();
         }
 
+        int DrawTab(int x, BTabPage page, Graphics graphics)
+        {
+            var size = graphics.MeasureString(page.Text, Font);
+            int width = (int)size.Width + 40;
+            page.TabRectangle = new Rectangle(x, 0, width, Height);
+            Color a = Color.FromArgb(30, 34, 42);
+            if (tabs.SelectedIndex == page.Index)
+                a = Color.FromArgb(40, 44, 52);
+            graphics.FillPath(new SolidBrush(a), Drawing.RoundedRect(page.TabRectangle, 6, true, false));
+            graphics.DrawPath(new Pen(a), Drawing.RoundedRect(page.TabRectangle, 6, true, false));
+            graphics.DrawString(page.Text, Font, Brushes.White, x + (width / 2) - (size.Width / 2), (Height / 2) - (size.Height / 2));
+            return width;
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             // sorry about this crazy messy code... lol
             Graphics graphics = e.Graphics;
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            Rectangle r = new Rectangle(0, 0, Width - 1, Height - 1);
-            Color c = Color.FromArgb(50, 50, 50);
-            //graphics.FillPath(new SolidBrush(c), Drawing.RoundedRect(r, 6, true, false));
-            //graphics.DrawPath(new Pen(c), Drawing.RoundedRect(r, 6, true, false));
-            int x = 0;
+            int x = 4;
             foreach (BTabPage page in TabPages)
-            {
-                var size = graphics.MeasureString(page.Text, Font);
-                int width = (int)size.Width + 40;
-                page.TabRectangle = new Rectangle(x, 0, width, Height);
-                Color a = Color.FromArgb(65, 65, 65);
-                if (tabs.SelectedIndex == page.Index)
-                    a = Color.FromArgb(85, 85, 85);
-                graphics.FillPath(new SolidBrush(a), Drawing.RoundedRect(page.TabRectangle, 6, true, false));
-                graphics.DrawPath(new Pen(a), Drawing.RoundedRect(page.TabRectangle, 6, true, false));
-                graphics.DrawString(page.Text, Font, Brushes.White, x + (width / 2) - (size.Width / 2), (Height / 2) - (size.Height / 2));
-                x += width + 2;
-            }
+                x += DrawTab(x, page, graphics) + 2;
         }
     }
 }
