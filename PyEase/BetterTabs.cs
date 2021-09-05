@@ -17,7 +17,7 @@ namespace PyEase
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(1, 1, Width, Height, 12, 12));
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(1, 1, Width, Height, 6, 6));
         }
     }
 }

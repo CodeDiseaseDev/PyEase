@@ -27,6 +27,7 @@ namespace PyEase
 			customTabMenu1.tabs = tabs;
 			customTabMenu1.AddTab(tabPage1);
 			guna2Panel1.Enabled = tabPage1.IsEditable;
+			guna2Panel7.Enabled = guna2Panel1.Enabled;
 			SoftBlink(discordplug, Color.FromArgb(60,60,60), Color.FromArgb(200,200,200), 2000, false);
 			label1.Text = label1.Text.Replace("v", typeof(Program).Assembly.GetName().Version.ToString());
 		}
@@ -50,7 +51,7 @@ namespace PyEase
 			page.File = file;
 			page.IsEditable = true;
 			page.Text = Path.GetFileName(file);
-            page.BackColor = Color.FromArgb(44, 44, 44);
+            page.BackColor = Color.FromArgb(40, 44, 52);
 			page.Controls.Add(scintilla);
 			page.Index = pages.Count;
 			scintilla.Dock = DockStyle.Fill;
@@ -134,7 +135,7 @@ namespace PyEase
 			scintilla.CaretWidth = 2;
 			scintilla.Styles[Style.Default].Font = "Consolas";
 			scintilla.Styles[Style.Default].Size = 10;
-			scintilla.Styles[Style.Default].BackColor = Color.FromArgb(44, 44, 44);
+			scintilla.Styles[Style.Default].BackColor = Color.FromArgb(40, 44, 52);
 			scintilla.Styles[Style.Default].ForeColor = IntToColor(0xFFFFFF);
 			scintilla.Margins[1].Width = 0;
 			scintilla.SetSelectionBackColor(true, IntToColor(0x353535));
@@ -226,6 +227,7 @@ namespace PyEase
         {
 			currentPage = pages[tabs.SelectedIndex];
 			guna2Panel1.Enabled = currentPage.IsEditable;
+			guna2Panel7.Enabled = guna2Panel1.Enabled;
 		}
 
         private void iconButton5_Click(object sender, EventArgs e)

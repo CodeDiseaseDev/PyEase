@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -17,6 +18,7 @@ namespace PyEase
         public BetterConsole()
         {
             InternalRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            InternalRichTextBox.BackColor = Color.FromArgb(20, 24, 32);
             Resize += BetterConsole_Resize;
         }
 

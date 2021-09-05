@@ -79,7 +79,7 @@ namespace PyEase
             pevent.Graphics.FillPath(new SolidBrush(back), path);
             pevent.Graphics.DrawPath(new Pen(back), path);
 
-            Image img = IconChar.ToBitmap(IconFont, IconSize, Enabled ? IconColor : Color.FromArgb(80,80,80));
+            Image img = IconChar.ToBitmap(IconFont, IconSize, Enabled ? IconColor : Color.FromArgb(80, 84, 92));
             pevent.Graphics.DrawImage(img, (r.Width / 2) - (img.Width / 2) + 2, (r.Height / 2) - (img.Height / 2) + 3);
         }
     }
