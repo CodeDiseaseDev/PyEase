@@ -31,6 +31,7 @@ namespace PyEase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.customTabMenu1 = new PyEase.CustomTabMenu();
             this.tabs = new PyEase.BetterTabs();
             this.tabPage1 = new PyEase.BTabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -53,7 +54,6 @@ namespace PyEase
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconButton9 = new PyEase.RoundedButtonIcon();
             this.iconButton3 = new PyEase.RoundedButtonIcon();
-            this.customTabMenu1 = new PyEase.CustomTabMenu();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -91,6 +91,19 @@ namespace PyEase
             this.splitContainer1.Size = new System.Drawing.Size(729, 444);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 4;
+            // 
+            // customTabMenu1
+            // 
+            this.customTabMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.customTabMenu1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.customTabMenu1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTabMenu1.Location = new System.Drawing.Point(0, 0);
+            this.customTabMenu1.Margin = new System.Windows.Forms.Padding(0);
+            this.customTabMenu1.Name = "customTabMenu1";
+            this.customTabMenu1.Size = new System.Drawing.Size(729, 26);
+            this.customTabMenu1.TabIndex = 9;
+            this.customTabMenu1.tabs = null;
+            this.customTabMenu1.Text = "customTabMenu1";
             // 
             // tabs
             // 
@@ -167,7 +180,7 @@ namespace PyEase
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(709, 268);
             this.label1.TabIndex = 1;
-            this.label1.Text = "PyEase Pre-release\r\nVersion v";
+            this.label1.Text = "PyEase beta\r\nVersion v";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconPictureBox1
@@ -530,18 +543,6 @@ namespace PyEase
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // customTabMenu1
-            // 
-            this.customTabMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.customTabMenu1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.customTabMenu1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTabMenu1.Location = new System.Drawing.Point(0, 0);
-            this.customTabMenu1.Margin = new System.Windows.Forms.Padding(0);
-            this.customTabMenu1.Name = "customTabMenu1";
-            this.customTabMenu1.Size = new System.Drawing.Size(729, 26);
-            this.customTabMenu1.TabIndex = 9;
-            this.customTabMenu1.Text = "customTabMenu1";
             // 
             // MainWindow
             // 
