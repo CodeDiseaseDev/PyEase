@@ -24,6 +24,8 @@ namespace PyEase
 			InitializeComponent();
 			pages.Add(tabPage1);
 			currentPage = tabPage1;
+			customTabMenu1.tabs = tabs;
+			customTabMenu1.AddTab(tabPage1);
 			guna2Panel1.Enabled = tabPage1.IsEditable;
 			SoftBlink(discordplug, Color.FromArgb(60,60,60), Color.FromArgb(200,200,200), 2000, false);
 			label1.Text = label1.Text.Replace("v", typeof(Program).Assembly.GetName().Version.ToString());
@@ -50,9 +52,11 @@ namespace PyEase
 			page.Text = Path.GetFileName(file);
             page.BackColor = Color.FromArgb(44, 44, 44);
 			page.Controls.Add(scintilla);
+			page.Index = pages.Count;
 			scintilla.Dock = DockStyle.Fill;
             tabs.TabPages.Add(page);
 			pages.Add(page);
+			customTabMenu1.AddTab(page);
 			scintilla.KeyDown += (sender, e) => scintilla1_KeyDown(sender, e, page);
 			scintilla.TextChanged += (sender, e) => scintilla1_TextChanged(sender, e, page);
 			tabs.SelectedIndex = tabs.TabCount - 1;
@@ -249,7 +253,10 @@ namespace PyEase
 		}
 
 		private void iconButton7_Click(object sender, EventArgs e)
-			=> tabs.TabPages.RemoveAt(tabs.SelectedIndex);
+        {
+			customTabMenu1.RemoveTabAt(tabs.SelectedIndex);
+			tabs.TabPages.RemoveAt(tabs.SelectedIndex);
+		}
 
 		private void iconButton8_Click(object sender, EventArgs e)
         {

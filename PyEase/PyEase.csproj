@@ -215,6 +215,9 @@
     <Compile Include="BTabPage.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomTabMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Drawing.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>

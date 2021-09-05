@@ -10,7 +10,7 @@ namespace PyEase
 {
     class Drawing
     {
-        public static GraphicsPath RoundedRect(Rectangle bounds, int radius)
+        public static GraphicsPath RoundedRect(Rectangle bounds, int radius, bool top = true, bool bottom = true)
         {
             int diameter = radius * 2;
             Size size = new Size(diameter, diameter);
@@ -27,11 +27,11 @@ namespace PyEase
             path.AddArc(arc, 180, 90);
 
             // top right arc  
-            arc.X = bounds.Right - diameter;
+            arc.X = bounds.Right - (top ? diameter : 0);
             path.AddArc(arc, 270, 90);
 
             // bottom right arc  
-            arc.Y = bounds.Bottom - diameter;
+            arc.Y = bounds.Bottom - (bottom ? diameter : 0);
             path.AddArc(arc, 0, 90);
 
             // bottom left arc 

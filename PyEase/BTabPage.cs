@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace PyEase
     {
         public Scintilla CodeEditor;
         private string file;
+        public Rectangle TabRectangle;
+        public int Index;
         public string File
         {
             get => file;
