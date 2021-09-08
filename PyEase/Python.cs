@@ -13,12 +13,25 @@ namespace PyEase
     {
         string pythonDir = $@"C:\Users\{Environment.UserName}\AppData\Local\Programs\Python";
 
-        public void RunScript(string[] code, ConsoleControl.ConsoleControl control, Action done)
+        public bool HasEnoughSpace(char driveLetter, long bytesSize)
+        {
+            DriveInfo drive = DriveInfo.GetDrives().Where(e => e.Name.Split(' ').Last()[0] == driveLetter).ToArray()[0]; // messy code lol
+
+            return drive.AvailableFreeSpace > bytesSize;
+        }
+
+        public void RunScript(string code, ConsoleControl.ConsoleControl control, Action done)
         {
             string temp = Path.GetTempPath();
             string file = Path.GetRandomFileName() + ".py";
             string path = Path.Combine(temp, file);
-            File.WriteAllLines(path, code);
+            byte[] data = Encoding.UTF8.GetBytes(code);
+            if (!HasEnoughSpace(temp[0]/*the first character of the temp directory will be the drive letter*/, data.Length))
+            {
+                MessageBox.Show("Not enough space on drive!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            File.WriteAllBytes(path, data);
             Task.Run(() =>
             {
 

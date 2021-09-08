@@ -171,7 +171,7 @@ namespace PyEase
 			if (splitContainer1.SplitterDistance < 5)
 				splitContainer1.SplitterDistance = 300;
 			iconButton1.Enabled = false;
-			python.RunScript(code.Split('\n'), consoleControl1, () =>
+			python.RunScript(code, consoleControl1, () =>
 			{
 				consoleControl1.InternalRichTextBox.AppendText("\n[Process exited]");
 				iconButton1.Enabled = true;
