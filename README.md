@@ -1,3 +1,16 @@
+# PYEASE HAS BEEN DISCONTINUED
+
+
+
+
+
+
+
+
+
+
+
+
 ## PyEase
 
 Beginner friendly Python IDE
