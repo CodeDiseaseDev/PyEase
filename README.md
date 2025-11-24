@@ -1,8 +1,4 @@
-# PYEASE HAS BEEN DISCONTINUED
-# PYEASE HAS BEEN DISCONTINUED
-# PYEASE HAS BEEN DISCONTINUED
-# PYEASE HAS BEEN DISCONTINUED
-# PYEASE HAS BEEN DISCONTINUED
+### PYEASE HAS BEEN DISCONTINUED
 
 
 
@@ -19,7 +15,6 @@
 
 Beginner friendly Python IDE
 
-# You can [download here](https://github.com/CodeDiseaseDev/PyEase/releases)
 ### Big thanks to [charchatzo](https://github.com/charchatzo) for fixing a ton of bugs
 
 We now have a [Discord server](https://discord.gg/4HTgUrzD), join us!
